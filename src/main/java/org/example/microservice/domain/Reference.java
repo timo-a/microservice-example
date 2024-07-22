@@ -3,10 +3,10 @@ package org.example.microservice.domain;
 import lombok.Value;
 
 @Value
-public class Pizza {
+public class Reference {
 
     String name;
 
-    int price;
+    Integer value;
 }
 
