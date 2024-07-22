@@ -38,9 +38,10 @@ jobs:
 
     - name: write summary
       run: |
+          FILE=build/generated-src/main-test/java/org/example/microservice/domain/ItemAssert.java
           echo '## Generated Assert for Record' >> $GITHUB_STEP_SUMMARY
-          echo '' >> $GITHUB_STEP_SUMMARY
-          echo '```java' >> $GITHUB_STEP_SUMMARY
-          cat build/generated-src/main-test/java/org/example/microservice/domain/Item.java >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo ''                               >> $GITHUB_STEP_SUMMARY
+          echo '```java'                        >> $GITHUB_STEP_SUMMARY
+          cat $FILE                             >> $GITHUB_STEP_SUMMARY
+          echo '```'                            >> $GITHUB_STEP_SUMMARY
           
